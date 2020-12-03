@@ -12,15 +12,15 @@ import { Storage } from "@ionic/storage";
 @Injectable({
   providedIn: "root",
 })
-export class LoginGuard implements CanActivate {
+export class AuthLoginGuard implements CanActivate {
   constructor(private storage: Storage, private router: Router) {}
 
   async canActivate() {
-    const isIntroShowed = await this.storage.get("isIntroShowed");
-    if (isIntroShowed) {
+    const isUserLoggedIn = await this.storage.get("isUserLoggedIn");
+    if (isUserLoggedIn) {
       return true;
     } else {
-      this.router.navigateByUrl("/intro");
+      this.router.navigateByUrl("/login");
     }
   }
 }

@@ -17,12 +17,26 @@ export class IntroPage implements OnInit {
 
   slides = [
     {
-      title: "Disfruta de tu musica",
-      subtitle: "En cualquier lugar",
-      description:
-        "Tu musica, tus artistas, tus albums, en toda hora, en todo lugar.",
-      icon: "play",
+      title: "Escucha tu música",
+      subTitle: "EN CUALQUIER LUGAR",
+      description: `Los mejores álbumes, las mejores canciones. Escucha y comparte en
+        cualquier momento, a todas horas.`,
+      icon: "play"
     },
+    {
+      title: "Disfruta de nuestro reproductor",
+      subTitle: "DE VIDEOS INCREÍBLES",
+      description: `Entra al modo video de nuestro reproductor y obtén acceso a clips,
+        documentales y making offs incríbles de tu artista favorito.`,
+      icon: "videocam"
+    },
+    {
+      title: "Accede al exclusivo",
+      subTitle: "MODO DEPORTE",
+      description: `Crea una playlist basada en tu actividad física. <br />
+        Ten reportes y acceso a lo que necesites, integrado ccon GPS!`,
+      icon: "bicycle"
+    }
   ];
 
   constructor(private router: Router, private storage: Storage) {}

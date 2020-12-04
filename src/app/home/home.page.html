@@ -1,3 +1,34 @@
-<ion-content padding class="content">
-  <h1>este es el home</h1>
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="end">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content padding>
+  <h1>Artistas</h1>
+  <ion-slides [options]="slideOps" *ngIf="artists.length">
+    <ion-slide *ngFor="let artist of artists">
+      <ion-avatar>
+        <img src="" alt="avatar" />
+        <span>Nombre del artista</span>
+      </ion-avatar>
+    </ion-slide>
+  </ion-slides>
+  <ion-slides [options]="slideOps" *ngIf="artists.length">
+    <ion-slide *ngFor="let artist of artists">
+      <ion-avatar>
+        <img src="" alt="avatar" />
+        <span>Nombre del artista</span>
+      </ion-avatar>
+    </ion-slide>
+  </ion-slides>
+  <ion-slides [options]="slideOps" *ngIf="artists.length">
+    <ion-slide *ngFor="let artist of artists">
+      <ion-avatar>
+        <img src="" alt="avatar" />
+        <span>Nombre del artista</span>
+      </ion-avatar>
+    </ion-slide>
+  </ion-slides>
 </ion-content>

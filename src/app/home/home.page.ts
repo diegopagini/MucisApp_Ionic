@@ -6,5 +6,12 @@ import { Component } from "@angular/core";
   styleUrls: ["home.page.scss"],
 })
 export class HomePage {
+  artists = [{}, {}];
+  slideOps = {
+    initialSlide: 2,
+    slidesPerView: 4,
+    centerdSlides: true,
+    speed: 400,
+  };
   constructor() {}
 }

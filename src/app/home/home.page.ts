@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { PlatziMusicService } from "../services/platzi-music.service";
 
 @Component({
   selector: "app-home",
@@ -6,12 +7,28 @@ import { Component } from "@angular/core";
   styleUrls: ["home.page.scss"],
 })
 export class HomePage {
-  artists = [{}, {}];
+  artists = [];
+  songs: any = [];
+  albums: any = [];
+
   slideOps = {
     initialSlide: 2,
     slidesPerView: 4,
     centerdSlides: true,
     speed: 400,
   };
-  constructor() {}
+
+  constructor(private musicService: PlatziMusicService) {}
+
+  ionViewDidEnter() {
+    this.musicService.getNewReleases().then((newReleases) => {
+      this.artists = newReleases.albums.items;
+      this.songs = newReleases.albums.items.filter(
+        e => e.album_type == "single"
+      );
+      this.albums = newReleases.albums.items.filter(
+        e => e.album_type == "album"
+      );
+    });
+  }
 }

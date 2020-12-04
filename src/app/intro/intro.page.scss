@@ -1,20 +1,21 @@
 ion-content {
-  --background: var(--ion-color-tertiary);
-  font-family: "Lato", sans-serif;
+  --background: var(--ion-color-success);
+  font-family: "Times New Roman", Times, serif;
 }
 ion-slides {
-  background: linear-gradient(#9198e5, #e66465);
+  background-color: white;
   height: 100%;
   max-width: 800px;
 }
 .swiper-slide {
-  display: flex;
-  flex-direction: column;
+  display: block;
+  margin-bottom: 64px;
+  background-color: white;
 }
 ion-slide > h1,
 h2 {
   margin: 0 0 0 0;
-  color: white;
+  color: var(--ion-color-primary);
 }
 ion-slide > p {
   font-style: italic;
@@ -31,12 +32,7 @@ ion-slide > ion-icon[name="close"] {
   font-size: 48px;
 }
 ion-slide > img {
-  max-height: 64px;
-  max-width: 64px;
-  margin: 0 auto;
-}
-.close {
-  position: absolute;
-  top: 0;
-  right: 0;
+  max-height: 50%;
+  max-width: 60%;
+  margin: 64px 0;
 }

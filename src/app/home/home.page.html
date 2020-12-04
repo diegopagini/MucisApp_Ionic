@@ -6,28 +6,21 @@
   </ion-toolbar>
 </ion-header>
 <ion-content padding>
-  <h1>Artistas</h1>
-  <ion-slides [options]="slideOps" *ngIf="artists.length">
-    <ion-slide *ngFor="let artist of artists">
+  <h1>Albums</h1>
+  <ion-slides [options]="slideOps" *ngIf="albums.length">
+    <ion-slide *ngFor="let album of albums">
       <ion-avatar>
-        <img src="" alt="avatar" />
-        <span>Nombre del artista</span>
+        <img [src]="album.images[0].url" alt="avatar" />
+        <span>{{album.name}}</span>
       </ion-avatar>
     </ion-slide>
   </ion-slides>
-  <ion-slides [options]="slideOps" *ngIf="artists.length">
-    <ion-slide *ngFor="let artist of artists">
+  <h1>Canciones</h1>
+  <ion-slides [options]="slideOps" *ngIf="songs.length">
+    <ion-slide *ngFor="let song of songs">
       <ion-avatar>
-        <img src="" alt="avatar" />
-        <span>Nombre del artista</span>
-      </ion-avatar>
-    </ion-slide>
-  </ion-slides>
-  <ion-slides [options]="slideOps" *ngIf="artists.length">
-    <ion-slide *ngFor="let artist of artists">
-      <ion-avatar>
-        <img src="" alt="avatar" />
-        <span>Nombre del artista</span>
+        <img [src]="song.images[0].url" alt="avatar" />
+        <span>{{song.name}}</span>
       </ion-avatar>
     </ion-slide>
   </ion-slides>
